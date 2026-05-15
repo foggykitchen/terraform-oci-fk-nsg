@@ -62,7 +62,7 @@ All examples are runnable and demonstrate **incremental OCI NSG usage patterns**
 
 ## Example Usage
 
-### NSG attached to compute
+### NSG attached to compute with reserved public IP
 
 ```hcl
 module "compute_nsg" {
@@ -99,7 +99,7 @@ module "compute_nsg" {
 }
 
 module "compute" {
-  source = "git::https://github.com/mlinxfeld/terraform-oci-fk-compute.git?ref=v0.2.0"
+  source = "git::https://github.com/mlinxfeld/terraform-oci-fk-compute.git?ref=v0.2.1"
 
   name             = "fk-web-01"
   tenancy_ocid     = var.tenancy_ocid
@@ -110,12 +110,20 @@ module "compute" {
   deployment_mode          = "instance"
   shape                    = "VM.Standard.E4.Flex"
   operating_system_version = "9"
-  assign_public_ip         = true
+  assign_public_ip         = false
 
   shape_config = {
     ocpus         = 1
     memory_in_gbs = 8
   }
+}
+
+module "public_ip" {
+  source = "git::https://github.com/mlinxfeld/terraform-oci-fk-public-ip.git?ref=v1.0.0"
+
+  name             = "fk-web-01-public-ip"
+  compartment_ocid = var.compartment_ocid
+  private_ip_id    = module.compute.primary_private_ip_id
 }
 ```
 
@@ -248,7 +256,7 @@ security_rules = list(object({
 
 | Example | Description |
 |-------|-------------|
-| `01_compute_instance_with_nsg` | Public single OCI compute instance with a VNIC-attached NSG controlling SSH and HTTP access |
+| `01_compute_instance_with_nsg` | Public single OCI compute instance with a VNIC-attached NSG and a reserved public IP controlling SSH and HTTP access |
 | `02_load_balancer_with_nsg` | Public OCI Load Balancer with a dedicated NSG on the frontend and private backend instances behind it |
 
 See [`examples/`](examples) for details.

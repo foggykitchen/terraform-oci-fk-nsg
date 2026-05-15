@@ -11,7 +11,7 @@ These examples are part of the **[FoggyKitchen.com training ecosystem](https://f
 
 | Example | Title | Key Topics |
 |:-------:|:------|:-----------|
-| 01 | **Compute Instance With NSG** | VNIC-attached NSG, public subnet, SSH and HTTP policy, `terraform-oci-fk-compute` integration |
+| 01 | **Compute Instance With NSG** | VNIC-attached NSG, reserved public IP, public subnet, SSH and HTTP policy, `terraform-oci-fk-compute` and `terraform-oci-fk-public-ip` integration |
 | 02 | **Load Balancer With NSG** | frontend NSG, public LB, private backends, `terraform-oci-fk-loadbalancer` and `terraform-oci-fk-compute` integration |
 
 ---

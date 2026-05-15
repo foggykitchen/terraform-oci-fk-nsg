@@ -1,5 +1,5 @@
 module "compute" {
-  source = "git::https://github.com/mlinxfeld/terraform-oci-fk-compute.git"
+  source = "git::https://github.com/mlinxfeld/terraform-oci-fk-compute.git?ref=v0.2.1"
 
   name             = "fk-nsg-demo-instance"
   tenancy_ocid     = var.tenancy_ocid
@@ -10,7 +10,7 @@ module "compute" {
   deployment_mode          = "instance"
   shape                    = "VM.Standard.E4.Flex"
   operating_system_version = "9"
-  assign_public_ip         = true
+  assign_public_ip         = false
 
   shape_config = {
     ocpus         = 1

@@ -11,7 +11,11 @@ output "instance_private_ip" {
 }
 
 output "instance_public_ip" {
-  value = module.compute.instance_public_ip
+  value = module.public_ip.ip_address
+}
+
+output "reserved_public_ip_id" {
+  value = module.public_ip.id
 }
 
 output "vcn_id" {
