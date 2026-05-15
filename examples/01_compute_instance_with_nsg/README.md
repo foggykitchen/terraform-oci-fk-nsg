@@ -100,13 +100,6 @@ This view confirms that:
 - the NSG created by this example is associated with the VNIC
 - the private addressing path used for the reserved public IP handoff is correct
 
-### Reserved Public IP Details
-
-<img src="01_compute_instance_with_nsg_reserved_public_ip_details.png" width="900"/>
-
-This view confirms that the OCI public IP resource is created as `RESERVED`
-and attached explicitly to the instance primary private IP.
-
 ### HTTP Access
 
 <img src="01_compute_instance_with_nsg_http_access.png" width="900"/>
