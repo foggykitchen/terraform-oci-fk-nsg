@@ -3,7 +3,7 @@ module "loadbalancer" {
 
   name                       = "fk-nsg-public-lb"
   compartment_ocid           = var.compartment_ocid
-  subnet_ids                 = [module.vcn.subnet_ids["public_lb"]]
+  subnet_ids                 = [module.vcn.subnet_ids["fk_public_lb_subnet"]]
   network_security_group_ids = module.load_balancer_nsg.network_security_group_ids
 
   health_checker = {

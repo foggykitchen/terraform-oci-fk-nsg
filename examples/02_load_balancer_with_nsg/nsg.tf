@@ -1,5 +1,5 @@
 module "load_balancer_nsg" {
-  source = "../.."
+  source = "git::https://github.com/mlinxfeld/terraform-oci-fk-nsg.git"
 
   name             = "fk-public-load-balancer-nsg"
   compartment_ocid = var.compartment_ocid
