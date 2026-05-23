@@ -1,5 +1,5 @@
 module "public_ip" {
-  source = "git::https://github.com/mlinxfeld/terraform-oci-fk-public-ip.git"
+  source = "git::https://github.com/foggykitchen/terraform-oci-fk-public-ip.git"
 
   name             = "fk-compute-instance-public-ip"
   compartment_ocid = var.compartment_ocid
