@@ -1,5 +1,5 @@
 module "compute" {
-  source = "git::https://github.com/mlinxfeld/terraform-oci-fk-compute.git?ref=v0.2.1"
+  source = "git::https://github.com/foggykitchen/terraform-oci-fk-compute.git?ref=v0.2.1"
 
   name             = "fk-nsg-demo-instance"
   tenancy_ocid     = var.tenancy_ocid
