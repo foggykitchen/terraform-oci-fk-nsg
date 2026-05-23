@@ -66,7 +66,7 @@ All examples are runnable and demonstrate **incremental OCI NSG usage patterns**
 
 ```hcl
 module "compute_nsg" {
-  source = "git::https://github.com/mlinxfeld/terraform-oci-fk-nsg.git?ref=v1.0.0"
+  source = "git::https://github.com/foggykitchen/terraform-oci-fk-nsg.git?ref=v1.0.0"
 
   name             = "fk-compute-nsg"
   compartment_ocid = var.compartment_ocid
@@ -131,7 +131,7 @@ module "public_ip" {
 
 ```hcl
 module "load_balancer_nsg" {
-  source = "git::https://github.com/mlinxfeld/terraform-oci-fk-nsg.git?ref=v1.0.0"
+  source = "git::https://github.com/foggykitchen/terraform-oci-fk-nsg.git?ref=v1.0.0"
 
   name             = "fk-lb-nsg"
   compartment_ocid = var.compartment_ocid
@@ -162,7 +162,7 @@ module "load_balancer_nsg" {
 }
 
 module "loadbalancer" {
-  source = "git::https://github.com/mlinxfeld/terraform-oci-fk-loadbalancer.git?ref=v1.0.0"
+  source = "git::https://github.com/foggykitchen/terraform-oci-fk-loadbalancer.git?ref=v1.0.0"
 
   name                       = "fk-public-lb"
   compartment_ocid           = var.compartment_ocid
@@ -279,7 +279,7 @@ This repository intentionally avoids abstractions that hide NSG mechanics behind
 
 - [terraform-oci-fk-vcn](https://github.com/foggykitchen/terraform-oci-fk-vcn)
 - [terraform-oci-fk-compute](https://github.com/foggykitchen/terraform-oci-fk-compute)
-- [terraform-oci-fk-loadbalancer](https://github.com/mlinxfeld/terraform-oci-fk-loadbalancer)
+- [terraform-oci-fk-loadbalancer](https://github.com/foggykitchen/terraform-oci-fk-loadbalancer)
 - [terraform-az-fk-nsg](https://github.com/mlinxfeld/terraform-az-fk-nsg)
 
 ---
