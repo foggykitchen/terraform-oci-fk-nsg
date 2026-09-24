@@ -2,7 +2,7 @@
 
 This repository contains a reusable **Terraform/OpenTofu module** and progressive examples for defining and attaching **Oracle Cloud Infrastructure (OCI) Network Security Groups (NSGs)** to **compute VNICs** and **load balancers** in a clean, explicit, and architecture-aware way.
 
-It is part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.com/courses-2/)** and is designed as a dedicated **network security boundary layer** for OCI workloads.
+It is part of the **[FoggyKitchen.com training ecosystem](https://foggykitchen.com/)** and is designed as a dedicated **network security boundary layer** for OCI workloads.
 
 Support expectations are documented in [SUPPORT.md](SUPPORT.md).
 
