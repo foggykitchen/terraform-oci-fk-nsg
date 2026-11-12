@@ -1,6 +1,6 @@
 module "compute" {
   count  = var.instance_count
-  source = "git::https://github.com/foggykitchen/terraform-oci-fk-compute.git?ref=v0.2.2"
+  source = "git::https://github.com/foggykitchen/terraform-oci-fk-compute.git?ref=v0.3.0" # TODO: tag not yet released
 
   name             = "fk-nsg-lb-backend-${count.index + 1}"
   tenancy_ocid     = var.tenancy_ocid

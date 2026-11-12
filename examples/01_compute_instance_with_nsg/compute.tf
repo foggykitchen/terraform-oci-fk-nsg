@@ -1,5 +1,5 @@
 module "compute" {
-  source = "git::https://github.com/foggykitchen/terraform-oci-fk-compute.git?ref=v0.2.1"
+  source = "git::https://github.com/foggykitchen/terraform-oci-fk-compute.git?ref=v0.3.0" # TODO: tag not yet released
 
   name             = "fk-nsg-demo-instance"
   tenancy_ocid     = var.tenancy_ocid

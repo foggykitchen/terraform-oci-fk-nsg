@@ -1,5 +1,5 @@
 module "compute_nsg" {
-  source = "git::https://github.com/foggykitchen/terraform-oci-fk-nsg.git?ref=v0.1.0"
+  source = "../.."
 
   name             = "fk-compute-instance-nsg"
   compartment_ocid = var.compartment_ocid
