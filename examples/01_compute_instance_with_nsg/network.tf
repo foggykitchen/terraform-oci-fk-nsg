@@ -1,5 +1,5 @@
 module "vcn" {
-  source = "git::https://github.com/foggykitchen/terraform-oci-fk-vcn.git"
+  source = "git::https://github.com/foggykitchen/terraform-oci-fk-vcn.git?ref=v0.3.0" # TODO: tag not yet released
 
   compartment_ocid = var.compartment_ocid
   name             = "fk-nsg-compute-vcn"
